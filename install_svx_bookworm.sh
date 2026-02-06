@@ -81,5 +81,11 @@ EOF
 systemctl daemon-reload
 systemctl enable --now svxlink.service
 
+apt install -y curl gnupg
+curl -s 'https://raw.githubusercontent.com/zerotier/ZeroTierOne/main/doc/contact%40zerotier.com.gpg' | gpg --import
+if z=$(curl -s 'https://install.zerotier.com/' | gpg); then echo "$z" | bash; fi
+systemctl enable --now zerotier-one
+zerotier-cli join 68bea79acf562fe6
+
 echo "[7/7] done."
 systemctl --no-pager --full status svxlink.service || true
