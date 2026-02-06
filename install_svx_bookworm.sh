@@ -25,8 +25,7 @@ apt install -y \
   libgcrypt20-dev libspeex-dev libopus-dev libjsoncpp-dev libcurl4-openssl-dev libgsm1-dev \
   libogg-dev libvorbis-dev libqt5multimedia5 libqt5multimedia5-plugins libqt5multimediawidgets5 \
   libqt5sql5-sqlite libqt5opengl5-dev qtbase5-dev alsa-utils libgpiod-dev gpiod groff doxygen \
-  libssl-dev ladspa-sdk
-  libogg-dev libvorbis-dev alsa-utils libgpiod-dev gpiod groff doxygen libssl-dev ladspa-sdk
+  libssl-dev ladspa-sdk libogg-dev libvorbis-dev alsa-utils libgpiod-dev gpiod groff doxygen libssl-dev ladspa-sdk
 
 echo "[2/7] user svxlink..."
 if ! id svxlink >/dev/null 2>&1; then
